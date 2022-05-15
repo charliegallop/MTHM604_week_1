@@ -27,20 +27,19 @@ def read_data(file_directory = None, resample_period = 'D', resample_aggregate =
 
     if resample_aggregate == 'mean':
         df = df.resample(resample_period).mean()
-        df = df.add_suffix(f"_{resample_aggregate}")
+        
 
     if resample_aggregate == 'max':
         df = df.resample(resample_period).max()
-        df = df.add_suffix(f"_{resample_aggregate}")
-        
+       
         
     if resample_aggregate == 'min':
         df = df.resample(resample_period).min()
-        df = df.add_suffix(f"_{resample_aggregate}")
+      
         
     if resample_aggregate == 'sum':
         df = df.resample(resample_period).sum()
-        df = df.add_suffix(f"_{resample_aggregate}")
+        
         
     df = df.fillna(0)
 
@@ -103,3 +102,5 @@ def add_aggregate(df = None, resample_aggregate = None, resample_period = None):
 
 
     # return df
+
+    #def sarimax_model()
